@@ -1,6 +1,19 @@
 player.onChat("run", function () {
+player.say("starting work")
 
-for(let z =1; z<6; z++){
-    blocks.place(BEDROCK, pos(0,0,z))
-}	
-})
+let cubeSize =10;
+let width=10;
+let height=10;
+let length=10;
+
+
+for(let x =1; x<width; x++){
+    for(let y=1; y <=height; y++){
+        for(let z=1; z<=length ;z++){ 
+    blocks.place(BEDROCK, pos(x,y,z));
+        }
+    }
+}
+player.say("done work");
+});
+
